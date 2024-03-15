@@ -17,4 +17,5 @@ console.log(`A soma dos numeros é ${numero1} + ${numero2}`);
 console.log(`A subtração dos numeros é ${numero1} - ${numero2}`);
 console.log(`A multiplicação dos numeros é ${numero1} * ${numero2}`);
 console.log(`A divisão dos numeros é ${numero1} / ${numero2}`);
-console.log(`O resto dos numeros é ${numero1} $ ${numero2}`)
+console.log(`O resto dos numeros é ${numero1} $ ${numero2}`);
+console.log(`O número elevado á potencia do numero2 é ${numero1 ** numero2}`)
