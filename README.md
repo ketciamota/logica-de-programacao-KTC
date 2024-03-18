@@ -66,7 +66,7 @@ Neste arquivo conhecemos os operadores de comparação e a estrutura lógic de d
  }
  ~~~
 
- ## desafio.js
+ ## desafio1.js
 
  escreva um codigo em js que resolve o problema do livro **logica de programação I**
  pagina 20, em que temos que obteer as 3 notas de um aluno, calcular a média e exibir
@@ -85,7 +85,8 @@ if (condicao1) {
 }
 
 
-### desafio.js
+~~~
+## desafio2.js
 
 Crie um programa que calcule o Índice de Massa Corporal (IMC) de uma pessoa.
 
@@ -111,8 +112,9 @@ Organização Mundial da Saúde (OMS): https://www.who.int/news-room/fact-sheets
 
 
 
+~~~
 
-##desafio3.js
+### desafio3.js
 
 Crie um conversor de temperatura entre as escalas Celsius, Fahrenheit e Kelvin. O usuário deve digitar a temperatura a ser convertida  e a escala da temperatura atual e a escala para o qual o valor deve ser convertido.
 
@@ -120,25 +122,28 @@ Entrada: valor atual da temperatura, escala atual da temperatura e a escala para
 
 Saída (1)
 
+~~~
+
 ###Fórmulas:
 
 De  |Para    |Fórmula
 --- | ---    | ---
-Celsius | Fahrenheit | t°F = (t°C * 9/5) = 32
+Celsius | Fahrenheit | t°F = (t°C * 9/5) + 32
 Celsius | Kelvin | tk = tc - 273.15
 Fahrenheit | Celsius | tc = (tf - 32) * 5/9
 Fahrenheit | Kelvin | tk = (tf + 459.67) * 5/9
-Kelvin | Celsius | tc = (tk + 273.15)c
-Kelvin | Fahrenheit | tf = (tk - 273.15) * 9/5 + 32
+Kelvin | Celsius | tc = (tk + 273.15)
+Kelvin | Fahrenheit | tf = tk * 9/5 - 459.67
 
 ## Problema adicional
 
 Como executar dois "programas" na mesma página? 
 
 
-  
- 
 
+
+~~~js
+  
  ### operadores de comparação:
 
 * == -> é igual
