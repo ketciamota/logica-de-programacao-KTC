@@ -109,6 +109,33 @@ Para mais informações:
 
 Organização Mundial da Saúde (OMS): https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
+
+
+
+##desafio3.js
+
+Crie um conversor de temperatura entre as escalas Celsius, Fahrenheit e Kelvin. O usuário deve digitar a temperatura a ser convertida  e a escala da temperatura atual e a escala para o qual o valor deve ser convertido.
+
+Entrada: valor atual da temperatura, escala atual da temperatura e a escala para exibição (conversão).
+
+Saída (1)
+
+###Fórmulas:
+
+De  |Para    |Fórmula
+--- | ---    | ---
+Celsius | Fahrenheit | t°F = (t°C * 9/5) = 32
+Celsius | Kelvin | tk = tc - 273.15
+Fahrenheit | Celsius | tc = (tf - 32) * 5/9
+Fahrenheit | Kelvin | tk = (tf + 459.67) * 5/9
+Kelvin | Celsius | tc = (tk + 273.15)c
+Kelvin | Fahrenheit | tf = (tk - 273.15) * 9/5 + 32
+
+## Problema adicional
+
+Como executar dois "programas" na mesma página? 
+
+
   
  
 
