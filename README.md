@@ -17,7 +17,7 @@ Em cada uma das operações, temos um operador aritmético:
 
 
 
-## operadores-atribuicao.js
+## peradores-atribuicao.js
 
 ~~~js
 let numero = 10;
