@@ -2,15 +2,40 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <h1>Programinhas</h1>
+    
+ 
     <button type="button" onclick="calculaimc()">Calculadora IMC</button>
-    <button type="button" onclick="convertetemperatura()">Conversor de temperatura</button>
+    <button type="button" onclick="convertetemperatura()">Conversor
+    Temperatura</button>
+
+    <h2>Calculadora IMC</h2>
+
+    <label for="">Peso</label>
+    <input type="number" id="Peso" step="0.5" min="0" max="1000"> 
+
+
+    <label for="">Altura</label>
+    <input type="number" id="Altura" step="0.01" min="0" max="3.00">
+
+    <button type="button" id="btcalcimc">Calcular IMC</button>
+    <button type="reset">Limpar</button>
+    
+
 
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
+    <script>
+        document.querySelector('#btcalcimc').addEventListener('click', function() {
+            const peso = document.querySelector('peso').value;
+            const altura = document.querySelector('altura').value;
+            const imc = calculaimc(peso, altura);
+            console.log(imc);
+        })
+    </script>
 </body>
 </html>
