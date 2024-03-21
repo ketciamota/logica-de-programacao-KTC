@@ -20,4 +20,9 @@ git config --global --unset user.email
 ~~~bash
 git clone https://github.com/(ususario)/(repositorio).git
 ~~~
-11. Abra o projeto clonado
+11. Abra o projeto clonado no VS Code:
+~~~bash
+code -r <repositorio_local>/
+~~~
+12. Faça login no VS Code local para sincronizar suas extensões e temas
+13. Ative o salvamento automático _(Auto Save)_: Arquivo > Salvamento automático
