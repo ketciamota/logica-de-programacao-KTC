@@ -4,22 +4,22 @@ function calculeimc(peso, altura) {
     let mensagem;
     
     if(imc < 18.5) {
-        console.log(`IMC: ${imc}) -- Abaixo do peso`);
+        mensagem = `IMC: ${imc.toFixed(1)} -- Abaixo do peso`;
     
-    }else if(imc > 18.5 && imc < 24.9) {
-        mensagem(`IMC: ${imc}) -- Peso normal`);
+    }else if (imc < 25) {
+        mensagem = `IMC: ${imc.toFixed(1)} -- Peso normal`;
     
-    }else if(imc >= 25.0 && imc < 30.0) {
-        mensagem(`IMC: ${imc}) -- Sobrepeso`);
+    }else if(imc < 30) {
+        mensagem = `IMC: ${imc.toFixed(1)} -- Sobrepeso`;
     
-    }else if(imc >=30.0 && imc < 35.0) {
-        mensagem(`IMC ${imc}) -- Obesidade grau I`);
+    }else if(imc < 35) {
+        mensagem = `IMC ${imc.toFixed(1)} -- Obesidade grau I`;
     
-    }else if(imc >=35 && imc < 40) {
-        mensagem(`iMC ${imc}) -- Obesidade grau II`);
+    }else if( imc < 40) {
+        mensagem = `iMC ${imc.toFixed(1)} -- Obesidade grau II`;
     
     }else {
-        mensagem`IMC: ${imc.toFixed()} -- Obesidade grau III`)`;`
+        mensagem = `IMC: ${imc.toFixed(1)} -- Obesidade grau III`;
     }
 
     return mensagem;

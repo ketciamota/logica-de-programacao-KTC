@@ -1,8 +1,6 @@
 function converteTemperatura(){
     
-    const temperatura = window.prompt('Qual valor da temperatura?');
-    const escala = window.prompt('Digite a escala atual se é em celsius ou fahrenheit ou kelvin');
-    const conversao = window.prompt('Qual escala deve ser?')
+    const temperaturaAtual= parseFloatexerci
     
     const celsiusParaFahrenheit = (temperatura * 9/5) + 32;
     const celsiusParaKelvin = temperatura - 273.15;
