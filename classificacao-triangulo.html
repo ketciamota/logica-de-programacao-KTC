@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de um triângulo</title>
+</head>
+<body>
+    <h1>Classificação de um triângulo</h1>
+    <a href="index.html">↩Home</a>
+    <form action=".">
+        
+
+        <label for="ladoA">Lado A:</label>
+        <input type="number" min="0">
+
+        <label for="ladoB">Lado B:</label>
+        <input type="number" min="0">
+
+        <label for="ladoC">Lado C:</label>
+        <input type="number" min="0">
+
+        <button type="button">Classificar</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        document.querySelector('#btClassificar').addEventListener('click', () => {
+
+            const ladoA = Number(document.querySelector('#ladoA').value)
+            const ladoB = Number(document.querySelector('#ladoB').value)
+            const LadoC = Number(document.querySelector('#ladoC').value)
+
+            const classificacao = classificaTriangulo(ladoA, ladoB, LadoC);
+
+            document.querySelector('#resultado').innerHTML = classificacao
+        });
+
+            document.querySelector('#btLimpar').addEventListener('click', () => {
+            document.querySelector('#resultado').innerHTML = '';
+        })
+
+            let mensagemErro, tipoTriangulo;
+
+            // teste do triãngulo
+
+            if (ladoA < (ladoB + LadoC) && ladoB < (ladoA + LadoC) && LadoC < (ladoA + ladoB))
+        {
+            // classificação
+
+            if (ladoA === ladoB === LadoC) {
+
+                tipoTriangilo = 'Equilátero';
+
+            } else if 
+                (ladoA === ladoB || ladoB !== LadoC ||
+                ladoA === LadoC) {
+
+                tipoTriangilo = 'Isosceles';
+
+            } else {
+
+                tipoTriangilo - 'Escaleno';
+
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
