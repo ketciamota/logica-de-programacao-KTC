@@ -3,21 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca de um Nome</title>
-</head>
+    <title>Busca de um nome</title>
+    <style>
+        label[for="nome"] {
+            color: blue;
+        }
+        .oculto {
+            display: none;
+        }
 
+    </style>
+</head>
 <body>
-    <h1>Busca de um Nome</h1>
-    <p id="demo1"></p>
-    <label for="nome">Nome:</label>
-    <input type="string" id="nome">
+
+    <form action="">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required autofocus>
+
+        <button type="reset" id="btCadastrar">Cadastrar</button>
+
+        <button type="button" id= "btPesquisar" class="oculto">Pesquisar</button>
+
+        
+
+    </form>
+
+    <div id="resultado"></div>
 
     <script>
-        let nomes = ["Amanda", "Carlos", "Daniel", "Fernanda", "José", "Luiza", 
-        "Nathaly", "Orlando", "Paula", "Vanessa" ]
-        document.getElementById("demo1").innerHTML = nomes;
+        
+        let nomes = []; // array vazio chamado "nomes"
+
+        document.addEventListener('keydown', (evento) => {
+
+            if (evento.key === 'Enter') {
+
+                evento.preventDefault();
+
+                if (nome.length < 10) {
+                    document.querySelector('#btCadastrar').click();
+
+                } else {
+
+                    document.querySelector('#btPesquisar').click();
+                }
+            }
+        })
+
+        document.querySelector('#btCadastrar').addEventListener('click', () => {
+
+            nomes.push(document.querySelector('#nome').value);
+            // ao atingir dez nomes...
+            if (nomes.length === 10) {
+
+                // Troque o label do imput "nome"
+                document.querySelector('label[for= "nome"]').innerHTML = 
+                'Nome para pesquisar';
+
+                //Troque o botão cadastrar
+                document.querySelector('#btCadastrar').classList.add
+                ('oculto');
+
+                //Desoculte o botão pesquisar
+                 document.querySelector('#btPesquisar').classList.remove
+                ('oculto');
+
+
+            } 
+
+        });
+
+        document.querySelector('#btPesquisar').addEventListener
+        ('click', () => {
+
+            const nomeBuscado = document.querySelector('#nome').value;
+            // condição alternativa : (nomes.indexOf (nomeBuscado >= 0)
+            if (nomes.includes(nomeBuscado)) {
+
+                document.querySelector('#resultado').innerHTML = 
+                `ACHEI na posição ${nomes.indexOf(nomeBuscado)}, 
+                "${nomes[nomes.indexOf(nomeBuscado)]}"`;
+
+            } else {
+
+                document.querySelector('#resultado').innerHTML = 'NÃO ACHEI';
+            }
+
+        });
+
+        // TODO: 
+
+
+        // 3. Após o 10º nome, o campo permite buscar um nome no array
+        // 4. Exibir se o nome foi encontrado
 
     </script>
-    
 </body>
 </html>
