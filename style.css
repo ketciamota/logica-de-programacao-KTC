@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    background-color: aquamarine;
 }
 
 .titulo-pagina {
@@ -33,27 +34,70 @@ main {
 }
 
 .botoes {
- margin: 2rem;
+ margin: 2rem 0;
  display: flex;
  gap: 1rem;
-
-}
-
-button {
-    width: 100%;
-    line-height: 2.2;
 }
 
 input {
     width: 100%;
     line-height: 2.2;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    padding-left: 8px;
+    margin-top: 6px;
 }
 
 #resultado {
     border: 1px solid black;
     height: 2rem;
     margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    line-height: 2.2;
+}
+
+button:hover { /*mãozinha*/
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: inset 4px, 4px, 4px, #333;
+}
+
+#btClassificar {
+    background-color: #1a6d91;
+    color: #ffffff;
 }
 
 
 
+#btClassificar:hover {   /* sobrevoo do mouse */
+    background-color: #1a6d91;
+}
+
+#btClassificar:active {
+    background-color: #1d6dd6;
+}
+
+#btLimpar{
+    background-color: #e85391;
+    color: #ffffff;
+}
+
+#btLimpar:hover {
+    background-color: #e85391;
+}
+
+#btLimpar:active {
+    background-color: #e82375;
+}
