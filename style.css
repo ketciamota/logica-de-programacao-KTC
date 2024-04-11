@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: aquamarine;
@@ -19,13 +23,19 @@ body {
 main {
     width: 800px;
     border: 1px solid black ;
-    margin: auto;
+    margin: 100px 50px 50px 100px ;
+    display: flex;
+    justify-content: center;
     padding: 2rem;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 4px 4px 2px #888; 
+    box-shadow: 4px 4px 4px #888; 
 }
 
+label{ 
+    text-align: center;
+    padding-left: 25%;
+}
 
 .elementos-em-linha {
     display: flex;
@@ -71,7 +81,7 @@ button:hover { /*mãozinha*/
 }
 
 button:active {
-    box-shadow: inset 4px, 4px, 4px, #333;
+    box-shadow: inset 2px, 2px, 2px, #333333;
 }
 
 #btClassificar {
@@ -101,3 +111,4 @@ button:active {
 #btLimpar:active {
     background-color: #e82375;
 }
+

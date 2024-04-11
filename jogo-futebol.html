@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificador de Resultado de Jogo</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+    
+<h1>Verificador de Resultado de Jogo</h1>
+
+<label for="placar">Informe o placar (n x n):</label>
+<input type="text" id="placar">
+<button onclick="verificarResultado()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function verificarResultado() {
+    var placar = document.getElementById("placar").value;
+
+    // Verificando se o placar está no formato correto
+    if (!/^(\d+)\s*x\s*(\d+)$/.test(placar)) {
+        alert("Por favor, insira o placar no formato correto 'n x n'. Exemplo: '7 x 1'");
+        return;
+    }
+
+    var gols = placar.split("x");
+    var time1Gols = Number(gols[0]);
+    var time2Gols = Number(gols[1]);
+
+    var resultado;
+
+    if (time1Gols > time2Gols) {
+        resultado = "Vitória do primeiro time!";
+    } else if (time1Gols < time2Gols) {
+        resultado = "Vitória do segundo time!";
+    } else {
+        resultado = "Empate!";
+    }
+
+    document.getElementById("resultado").textContent = resultado;
+}
+</script>
+
+</body>
+</html>
