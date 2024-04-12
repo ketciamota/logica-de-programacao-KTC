@@ -15,13 +15,28 @@
 </head>
 <body>
     
-<h1>Verificador de Resultado de Jogo</h1>
+<h1 class="titulo-pagina">Resultado do Jogo</h1>
 
+    <main>
+
+<form action=".">
+    <div class="elementos-em-linha">
+        <div class="controle-form">
 <label for="placar">Informe o placar (n x n):</label>
 <input type="text" id="placar">
-<button onclick="verificarResultado()">Verificar</button>
+        </div>
 
-<p id="resultado"></p>
+        <div class="botoes">
+<button onclick="verificarResultado()">Verificar</button>
+        </div>
+
+
+    </div>
+
+</form>
+        <div id="resultado"></div>
+
+    </main>
 
 <script>
 function verificarResultado() {
