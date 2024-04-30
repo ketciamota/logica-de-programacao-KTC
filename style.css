@@ -22,3 +22,11 @@ body {
 form {
     width: 600px;
 }
+
+.monetario::before {
+    content: "R$"
+}
+
+#resultado {
+    gap: 1rem;
+}
