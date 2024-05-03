@@ -29,7 +29,7 @@ main {
     margin: 100px 100px 100px 100px ;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 4px 4px 4px #888; 
@@ -37,7 +37,7 @@ main {
 
 label{ 
     text-align: center;
-    padding-left: 25%;
+    padding-left: 50%;
 }
 
 .elementos-em-linha {
@@ -49,15 +49,15 @@ label{
 .botoes {
  margin: 2rem 0;
  display: flex;
- gap: 1rem;
+ gap: 5rem;
 }
 
 input {
     width: 100%;
     line-height: 2.2;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 1px solid #000000;
-    padding-left: 8px;
+    padding-left: 10px;
     margin-top: 6px;
 }
 

@@ -1,6 +1,6 @@
 function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
 
-    let temperaturaConvertida, msgErro = 'Ok';
+    let temperaturaConvertida, msgErro = 0;
     
     if (!isNaN(temperaturaAtual)) {
     
@@ -10,7 +10,7 @@ function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
         if (escalaAtual === 'C') {
     
             if (escalaConversao === 'K') {
-                temperaturaConvertida = temperaturaAtual + 273.15;
+                temperaturaConvertida = temperaturaAtual - 273.15;
     
             } else if (escalaConversao === 'F') {
                 temperaturaConvertida = (temperaturaAtual * 9 / 5) + 32;

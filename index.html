@@ -107,12 +107,12 @@
         document.querySelector('#btCalcIMC').addEventListener('click', function () {
             const peso = document.querySelector('#peso').value;
             const altura = document.querySelector('#altura').value;
-            const imc = calculaIMC(peso, altura);
-            console.log(imc);
-            // (parte de dentro do HTML) -> innerHTML
+            const imc = calculeIMC(peso, altura);
             document.querySelector('#resultadoIMC').innerHTML = imc;
-        });
 
+            
+        });
+ 
         document.querySelector('#btLimpaIMC').addEventListener('click', function () {
             document.querySelector('#resultadoIMC').innerHTML = '';
         });
@@ -123,25 +123,25 @@
             const temperaturaAtual = document.querySelector('#valorTemperatura').value;
             const escalaAtual = document.querySelector('#escalaAtual').value;
             const escalaConvertida = document.querySelector('#escalaConvertida').value;
-
             const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
+            document.querySelector('#resultadoTemp').innerHTML = conversao
 
-            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida:
-             ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+           
         });
         // Tratamento de erros Desafio 3
-        if (conversao.msgErro === 'Ok') {
+        
+        // if (temperaturaConvertida.msgErro === 'Ok') {
 
-            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + (conversao.grauEscala ? ' °' : ' ') + conversao.escalaConversao}`;
+        //     document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + (conversao.grauEscala ? ' °' : ' ') + conversao.escalaConversao}`;
 
-        } else {
+        // } else {
 
-            document.querySelector('#resultadoTemp').innerHTML = conversao.msgErro;
-        };
+        //     document.querySelector('#resultadoTemp').innerHTML = conversao.msgErro;
+        // };
 
-        document.querySelector('#btLimpaTemp').addEventListener('click', function () {
-            document.querySelector('#resultadoTemp').innerHTML = '';
-        });
+        // document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+        //     document.querySelector('#resultadoTemp').innerHTML = ' ';
+        // });
         // Fim Desafio 3
 
         // Complemento Desafio 3
