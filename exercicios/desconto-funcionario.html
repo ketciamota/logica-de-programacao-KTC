@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Funcionário</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="titulo-pagina">Desconto</h1>
+    
+
+    <main>
+    <form action="">
+
+        <label for="valordacompra">Valor da Compra</label>
+        <input type="number" id="valordacompra">
+
+        <label for="Selecione">Selecione</label> 
+        <select id="Selecione">
+        <option value="C">Cliente</option>
+        <option value="F">Funcionário</option>
+        <option value="V">Vip</option>
+        </select>
+
+        <button type="button" id="calcular">Calcular</button>
+
+    </form>
+    </main>
+
+    <script>
+        function aplicaDesconto(valor, selecione) {
+            let resultado 
+            if (selecione === 'F')
+            {
+                resultado = `${valor* 0.1}`
+            }
+            else {msg = 'erro'}
+
+        }
+
+        document.querySelector('#calcular').addEventListener('click', ()=>{
+            const valor = document.querySelector('#valor').value;
+            const selecione = document.querySelector('#selecione').value;
+        })
+        
+
+    </script>
+
+    
+</body>
+</html>
