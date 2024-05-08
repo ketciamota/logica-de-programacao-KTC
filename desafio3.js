@@ -1,11 +1,15 @@
 function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
 
-    let temperaturaConvertida, msgErro = 'Ok';
+    let
+        temperaturaConvertida,
+        msgErro = 'Ok',
+        grauEscala = escalaConversao !== 'K' ? true : false;
     
-    if (!isNaN(temperaturaAtual)) {
+    if (!isNaN(temperaturaAtual) && temperaturaAtual.length) {
     
         escalaAtual = escalaAtual.toUpperCase();
         escalaConversao = escalaConversao.toUpperCase();
+        temperaturaAtual = Number(temperaturaAtual);
     
         if (escalaAtual === 'C') {
     
@@ -66,9 +70,8 @@ function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
         escalaAtual: escalaAtual,
         escalaConversao: escalaConversao,
         temperaturaConvertida: temperaturaConvertida,
+        grauEscala: grauEscala,
         msgErro: msgErro
-    }; 
+    } 
 
 }
-    
-    
